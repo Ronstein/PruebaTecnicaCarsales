@@ -1,0 +1,45 @@
+<h1>Lista de Episodios</h1>
+
+<div style="margin-bottom: 1rem;">
+  <input type="text" style="width: 100%; padding: 8px; font-size: 1rem;" placeholder="Buscar Episodio"
+    (input)="searchQuery.set(txtSearch.value)" #txtSearch>
+</div>
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre</th>
+      <th>Episodio</th>
+      <th>Fecha de emisión</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+  <tbody>
+    @if (episodeState.episodes().length === 0) {
+    <tr>
+      <td colspan="5" style="text-align: center;">No hay registros</td>
+    </tr>
+    } @else {
+    @for (episode of episodeState.episodes() | episodeFilter:searchQuery(); track episode.id; let index = $index) {
+    <tr>
+      <td>{{ index + 1 }}</td>
+      <td>{{ episode.name }}</td>
+      <td>{{ episode.episode }}</td>
+      <td>{{ episode.air_date }}</td>
+      <td>
+        <a [routerLink]="['/episodes', episode.id]" class="cursor-pointer link-primary">
+          Ver detalle
+        </a>
+      </td>
+    </tr>
+    }
+    }
+  </tbody>
+</table>
+
+<div style="margin-top: 1rem; display: flex; align-items: center; gap: 1rem;">
+  <button (click)="prevPage()" [disabled]="episodeState.page() <= 1">Anterior</button>
+  <span>Página {{ episodeState.page() }}</span>
+  <button (click)="nextPage()" [disabled]="episodeState.episodes().length === 0">Siguiente</button>
+</div>

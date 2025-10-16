@@ -1,0 +1,19 @@
+@let episode = episodeState.selectedEpisode();
+
+@if (!episode) {
+<p>Cargando detalle del episodio...</p>
+} @else {
+<div class="episode-detail">
+  <h2>{{ episode.name }}</h2>
+  <p><strong>Fecha de emisión:</strong> {{ episode.air_date }}</p>
+  <p><strong>Código del episodio:</strong> {{ episode.episode }}</p>
+  <p><strong>Fecha de creación:</strong> {{ episode.created | date:'dd/MM/yyyy HH:mm' }}</p>
+
+  <h3>Personajes</h3>
+  <div class="character-gallery">
+    @for (img of characterImages(); track $index) {
+    <img [src]="img" alt="Personaje del episodio" class="character-img" />
+    }
+  </div>
+</div>
+}
