@@ -199,15 +199,15 @@ http://localhost:4200
 _Aquí puedes insertar imágenes descriptivas del frontend y backend._
 
 ### 📸 Vista WebApi Backend
-![WebApiNet](../PruebaTecnicaCarsales/frontend/prueba-tecnica-carsales-frontend/assets/backend.png)
+![WebApiNet](./frontend/prueba-tecnica-carsales-frontend/assets/backend.png)
 
 ### 📸 Vista de la lista de episodios
-![Lista de Episodios](../PruebaTecnicaCarsales/frontend/prueba-tecnica-carsales-frontend/assets/frontend1.png)
-![Lista de Episodios](../PruebaTecnicaCarsales/frontend/prueba-tecnica-carsales-frontend/assets/frontend2.png)
-![Lista de Episodios](../PruebaTecnicaCarsales/frontend/prueba-tecnica-carsales-frontend/assets/frontend3.png)
+![Lista de Episodios](./frontend/prueba-tecnica-carsales-frontend/assets/frontend1.png)
+![Lista de Episodios](./frontend/prueba-tecnica-carsales-frontend/assets/frontend2.png)
+![Lista de Episodios](./frontend/prueba-tecnica-carsales-frontend/assets/frontend3.png)
 
 ### 📸 Vista del detalle del episodio
-![Detalle del Episodio](../PruebaTecnicaCarsales/frontend/prueba-tecnica-carsales-frontend/assets/frontend4.png)
+![Detalle del Episodio](./frontend/prueba-tecnica-carsales-frontend/assets/frontend4.png)
 
 ---
 
